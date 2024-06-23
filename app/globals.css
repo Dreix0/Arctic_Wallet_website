@@ -1,0 +1,531 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+Remplacer dégradé de fond par une image dans la partie header
+Remplacer fond rond par un cercle avec dégradé dans la partie présentation
+Réduire les images pour le temps de chargement
+Voir pour rajouter des images de banquise pour éviter qu'elles soient trop grosse
+*/
+
+/* Général */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 19, 49, 93;
+  --secondary-rgb : 90, 197, 234;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(var(--background-rgb));
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 2.5vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+  font-size: 1.5vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  h1{
+    font-size: 3vh;
+  }
+
+  h2{
+    font-size: 2.5vh;
+  }
+
+  p{
+    font-size: 1.5vh;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Bar de navigation */
+nav{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid rgb(var(--foreground-rgb));
+  border-radius: 50px;
+  background-color: rgb(var(--background-rgb));
+  width: 90vw;
+  height: 7vh;
+  left: 5vw;
+  top: 1.5vh;
+  z-index: 1;
+}
+
+nav img{
+  height: 100%;
+  border-radius: 50px 0px 0px 50px;
+  background-color: rgb(var(--foreground-rgb));
+  padding-left: 1vw;
+}
+
+nav button{
+  margin: auto;
+  margin-right: 50px;
+}
+
+/* Header */
+#header{
+  height: 100vh;
+  padding-top: 10vh;
+  background: url("../public/DA/fond_dégradé.jpg");  /* Mettre un radiant plutôt qu'une image */
+  background-size: cover;
+}
+
+#header h1{
+  margin: 5vw;
+}
+
+#banquise_img_1, #banquise_img_2, #banquise_img_3{
+  position: absolute;
+  bottom: 0;
+  width: 40vw;
+  min-width: 500px;
+  max-width: none;  /*  ???  */
+}
+
+#banquise_img_1{right: 0}
+#banquise_img_2{right: 30vw}
+#banquise_img_3{left: 0}
+
+@media only screen and (max-width: 600px){
+  #banquise_img_2, #banquise_img_3{display: none}
+
+  #banquise_img_1{
+    width: 120vw;
+    right: -10vw;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  #banquise_img_2{display: none}
+}
+
+.stars{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#iceberg, #iceberg_2{
+  position: absolute;
+  z-index: -2;
+  width: 15%;
+}
+
+#iceberg{
+  bottom: -90vh;
+  left: 50px;
+}
+
+#iceberg_2{
+  bottom: -115vh;
+  right: 50px;
+}
+
+#bas_banquise{
+  width: 100vw;
+  position: absolute;
+}
+
+/* Presentation */
+#presentation{
+  min-height: 100vh;
+  margin-bottom: -5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#presentation div{
+  display: flex;
+  width: 50vw;
+  margin-left: 5vw;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#presentation h1{
+  margin: 5vh 0;
+}
+
+#presentation button{
+  background-color: rgb(var(--secondary-rgb));
+  padding: 10px 20px;
+  margin: 5vh;
+  border-radius: 15px;
+}
+
+#usb_key{
+  z-index: -1;
+  width: 33vw;
+  max-height: 75vh;
+  border-radius: 50px 0 0 50px;
+  padding: 10px 0 10px 10px;
+  background-color: white;
+}
+
+.flip_words {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.flip_words *{
+  margin-left: 3px;
+}
+
+@media (max-width: 768px) {
+  #presentation div{
+    width: 90vw;
+    margin: auto;
+  }
+
+  #usb_key{
+    width: 80vw;
+    max-height: 50vh;
+    margin-left: 20vw;
+  }
+}
+
+/* Avantages */
+#advantages_bloc{
+  text-align: center;
+  margin: auto;
+  padding-top: 5vh;
+}
+
+#advantages_bloc h1{
+  padding: 7vh;
+}
+
+#advantages_title{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10vw 0 10vw;
+}
+
+#advantages_title p{
+  padding: 0 3vw;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#advantages_title h3{
+  display: none;
+}
+
+#safety, #price, #accessibility{
+  width: 25vw;
+  padding-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.icone{
+  max-width: 150px;
+  margin: auto;
+}
+
+#advantages_title .selected{
+  background-color: rgb(var(--foreground-rgb));
+  color: black;
+  border-radius: 25px 25px 0 0;
+  padding-bottom: 5vh;
+  margin-bottom: 0;
+  border: none;
+}
+
+#advantages_text{
+  background-color: rgb(var(--foreground-rgb));
+  color: black;
+  padding: 0 10vw 5vh 10vw;
+}
+
+#advantages_text .not_selected{
+  display: none;
+}
+
+.advantage{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.advantage img{
+  max-width: 25vw;
+  min-width: 150px;
+  max-height: 30vh;
+  margin: auto;
+}
+
+.advantage .texte{
+  flex: 2;
+  height: 100%;
+  min-width: 300px;
+}
+
+.advantage .image{
+  flex: 1;
+}
+
+.advantage h2{
+  margin-bottom: 3vh;
+}
+
+#graph_param p{
+  text-align: center;
+}
+
+#graph{
+  width: 50vw;
+  height: 35vh;
+  min-width: 300px;
+  margin: auto;
+}
+
+#tooltip{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0 15px 10px 15px;
+}
+
+#tooltip h2{
+  font-size: larger;
+}
+
+#ledger_tooltip{
+  color: rgba(108,222,248,1);
+}
+
+#arctic_tooltip{
+  color: rgba(19,49,93,1);
+}
+
+@media (max-width: 768px) {
+  .advantage:nth-child(2), .advantage:nth-child(6){
+    flex-wrap: wrap-reverse;
+  }
+
+  #advantages_title p{
+    display: none;
+  }
+  
+  #advantages_title h3{
+    font-size: 5vh;
+    transform: rotate(-90deg);
+    display: block;
+    margin-bottom: -35px;
+  }
+
+  #advantages_title .selected h3{
+    display: none;
+  }
+}
+
+/* Whitelist */
+#whitelist{
+  width: 75vw;
+  margin: 10vh auto;
+  padding: 50px;
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 25px;
+  text-align: center;
+  color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+#whitelist_text{
+  position: relative;
+}
+
+#whitelist p{
+  text-align: center;
+}
+
+#whitelist button{
+  background-color: rgb(var(--background-rgb));
+  color: white;
+  padding: 5px 15px;
+  border-radius: 0 15px 15px 0;
+}
+
+#whitelist input{
+  padding: 5px;
+  border-radius: 15px 0 0 15px;
+  margin-top: 50px;
+}
+
+#mobile_ripple{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #whitelist{
+    width: 90vw;
+    padding: 25px 0;
+  }
+
+  #whitelist button{
+    width: 25vw;
+    max-width: 100px;
+  }
+
+  #whitelist input{
+    width: 50vw;
+  }
+
+  #mobile_ripple{
+    display: inline;
+  }
+
+  #ripple{
+    display: none;
+  }
+}
+
+/* FAQ */
+#faq{
+  margin: 5vh;
+}
+
+#faq h1{
+  text-align: center;
+}
+
+#faq div{
+  width: 50vw;
+  min-width: 500px;
+  margin: auto;
+  text-align: justify;
+}
+
+#faq h2{
+  margin: 15px;
+}
+
+#faq p{
+  margin: -5px 15px 15px 15px;
+}
+
+#faq ul{
+  margin: 0 25px 15px 50px;
+  list-style-type: disc;
+}
+
+#faq b{
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #faq div{
+    width: 90vw;
+    min-width: 0;
+    margin-left: -5vw;
+  }
+}
+
+/* Footer */
+footer{
+  margin-top: 10vh;
+  min-height: 25vh;
+  position: relative;
+  text-align: center;
+}
+
+footer hr{
+  position: relative;
+  z-index: -2;
+}
+
+#footer_content{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: auto;
+}
+
+#footer_content div{
+  min-width: 200px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+#footer_content div img{
+  margin-top: 15px;
+}
+
+#footer_content h2{
+  margin-bottom: 15px;
+}
+
+#footer_content div a{
+  display: block;
+  text-align: left;
+}
+
+#algues, #bulles{
+  position: absolute;
+  bottom: -10px;
+}
+
+#algues{
+  width: 250px;
+  right: -60px;
+  z-index: -1;
+}
+
+#bulles{
+  width: 150px;
+  right: 0px;
+  z-index: -1;
+}
+
+#credit{
+  text-align: center;
+  position: absolute;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  #footer_content{
+    margin: 25px auto;
+  }
+
+  #footer_content div{
+    width: 80vw;
+  }
+}

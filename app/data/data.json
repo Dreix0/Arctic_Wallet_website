@@ -1,0 +1,42 @@
+{
+    "BTC10" : [
+        {"year": 2014, "ledger": 79.00, "arctic": 24.00},
+        {"year": 2015, "ledger": 128.00, "arctic": 62.40},
+        {"year": 2016, "ledger": 204.80, "arctic": 123.84},
+        {"year": 2017, "ledger": 327.68, "arctic": 222.14},
+        {"year": 2018, "ledger": 524.29, "arctic": 379.43},
+        {"year": 2019, "ledger": 838.86, "arctic": 631.09},
+        {"year": 2020, "ledger": 1342.18, "arctic": 1033.74},
+        {"year": 2021, "ledger": 2147.48, "arctic": 1677.99},
+        {"year": 2022, "ledger": 3435.97, "arctic": 2708.78},
+        {"year": 2023, "ledger": 5497.56, "arctic": 4358.05},
+        {"year": 2024, "ledger": 8796.09, "arctic": 6996.87}
+    ],
+    "BTC5" : [
+        {"year": 2019, "ledger": 79.00, "arctic": 24.00},
+        {"year": 2020, "ledger": 143.68, "arctic": 67.10},
+        {"year": 2021, "ledger": 258.05, "arctic": 144.52},
+        {"year": 2022, "ledger": 436.46, "arctic": 283.56},
+        {"year": 2023, "ledger": 832.37, "arctic": 533.27},
+        {"year": 2024, "ledger": 1494.93, "arctic": 981.75}
+    ], 
+    "ETH8" : [
+        {"year": 2016, "ledger": 79.00, "arctic": 24.00},
+        {"year": 2017, "ledger": 163.20, "arctic": 72.96},
+        {"year": 2018, "ledger": 332.93, "arctic": 172.84},
+        {"year": 2019, "ledger": 679.17, "arctic": 376.59},
+        {"year": 2020, "ledger": 1385.51, "arctic": 792.24},
+        {"year": 2021, "ledger": 2826.45, "arctic": 1640.18},
+        {"year": 2022, "ledger": 5765.95, "arctic": 3369.96},
+        {"year": 2023, "ledger": 11762.54, "arctic": 6898.73},
+        {"year": 2024, "ledger": 23995.58, "arctic": 14097.40}
+    ],
+    "ETH5" : [
+        {"year": 2019, "ledger": 79.00, "arctic": 24.00},
+        {"year": 2020, "ledger": 158.72, "arctic": 71.62},
+        {"year": 2021, "ledger": 314.90, "arctic": 166.09},
+        {"year": 2022, "ledger": 624.76, "arctic": 353.51},
+        {"year": 2023, "ledger": 1239.53, "arctic": 725.37},
+        {"year": 2024, "ledger": 2459.23, "arctic": 1463.14}
+    ]
+}
