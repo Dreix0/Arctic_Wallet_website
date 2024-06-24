@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import Lottie, {LottieRefCurrentProps} from "lottie-react";
 import Link from "next/link";
 
@@ -26,6 +26,7 @@ export default function Home() {
   const [displayResponse, setDisplayResponse] = useState(0);
 
   const [data, setData] = useState(Data.ETH5);
+  const [whitelistMessage, setWhitelistMessage] = useState("");
 
   const lockRef = useRef<LottieRefCurrentProps>(null);
   const coinsRef = useRef<LottieRefCurrentProps>(null);
@@ -46,6 +47,30 @@ export default function Home() {
         break;
       default:
         setData(Data.ETH5);
+    }
+  }
+
+  async function addEmailToDatabase(e : FormEvent<HTMLFormElement>){
+    e.preventDefault();
+    const form = e.currentTarget;
+    const emailInput = form.elements.namedItem("email") as HTMLInputElement;
+    const email = emailInput.value.trim(); // Trim pour enlever les espaces avant et après l'email
+
+    try {
+      const response = await fetch(`/api/add-email?email=${encodeURIComponent(email)}`, {
+        method: 'GET'
+      });
+  
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'ajout de l\'email');
+      }
+  
+      const data = await response.json();
+      console.log('Réponse de l\'API :', data);
+      setWhitelistMessage("Email ajouté avec succès");
+    } catch (err) {
+      console.error('Erreur :', err);
+      setWhitelistMessage("Problème lors de l'ajout de l'email");
     }
   }
 
@@ -111,7 +136,7 @@ export default function Home() {
             <div className="advantage">
               <div className={"texte"}>
                 <h2>Stockage hors ligne</h2>
-                <p>Avec Arctic Wallet, les clés privées qui permettent d'accéder à vos cryptomonnaies sont stockées sur des dispositifs de stockage externes non connectés à Internet, comme des clés USB ou des cartes SD, ce qui protège ainsi vos actifs numériques des hackers et des attaques lorsque vous êtes hors ligne.</p>
+                <p>Avec Arctic Wallet, les clés privées qui permettent d&apos;accéder à vos cryptomonnaies sont stockées sur des dispositifs de stockage externes non connectés à Internet, comme des clés USB ou des cartes SD, ce qui protège ainsi vos actifs numériques des hackers et des attaques lorsque vous êtes hors ligne.</p>
               </div>
               <div className={"image"}><img src="animation/offline.gif" alt="offline gif" /></div>
             </div>
@@ -120,9 +145,9 @@ export default function Home() {
               <div className={"image"}><img src="animation/authentication.gif" alt="offline gif" /></div>
               <div className={"texte"}>
                 <h2>Triple authentification possible</h2>
-                <p>Si votre appareil le permet, vous pouvez activer l'authentification à trois facteurs en activant la vérification biométrique, comme une empreinte digitale ou une reconnaissance faciale. 
+                <p>Si votre appareil le permet, vous pouvez activer l&apos;authentification à trois facteurs en activant la vérification biométrique, comme une empreinte digitale ou une reconnaissance faciale. 
                   Ainsi, pour accéder à votre portefeuille, nous vérifions ce que vous <b>avez</b> (votre dispositif de stockage externe), ce que vous <b>savez</b> (votre mot de passe) et qui vous <b>êtes</b>.
-                  Cette combinaison rend toute tentative d'accès non autorisée extrêmement difficile.</p>
+                  Cette combinaison rend toute tentative d&apos;accès non autorisée extrêmement difficile.</p>
               </div>
             </div>
             <hr/>
@@ -140,8 +165,8 @@ export default function Home() {
             <h1>Pourquoi est-ce moins cher ?</h1>
             <div className="advantage">
               <div className={"texte"}>
-                <h2>Le prix d'un café</h2>
-                <p>À seulement 2€ par mois, notre solution rend la sécurité des cryptomonnaies accessible pour le prix d'un café, afin qu'elle soit abordable pour tous.</p>
+                <h2>Le prix d&apos;un café</h2>
+                <p>À seulement 2€ par mois, notre solution rend la sécurité des cryptomonnaies accessible pour le prix d&apos;un café, afin qu&apos;elle soit abordable pour tous.</p>
               </div>
               <div className={"image"}><img src="animation/coffee.gif" alt="offline gif" /></div>
             </div>
@@ -150,18 +175,18 @@ export default function Home() {
               <div className={"image"}><img src="animation/cancel.gif" alt="cancel gif" /></div>
               <div className={"texte"}>
                 <h2>Flexibilité</h2>
-                <p>Grâce à notre modèle d'abonnement, vous pouvez bénéficier de nos services sans engagement. 
+                <p>Grâce à notre modèle d&apos;abonnement, vous pouvez bénéficier de nos services sans engagement. 
                   Vous pouvez arrêter ou reprendre votre abonnement à tout moment et ne payer que lorsque vous avez réellement besoin de nos services.</p>
               </div>
             </div>
             <hr/>
             <div className="advantage">
               <div className={"texte"}>
-                <h2>Pas d'achat initial</h2>
+                <h2>Pas d&apos;achat initial</h2>
                 <p>Contrairement aux autres solutions de hardwallets, notre service ne nécessite aucun achat initial coûteux. 
                   Vous pouvez commencer à protéger vos actifs numériques sans investir dans des équipements et ainsi placer votre capital dans de réels actifs.</p>
                 <br/>
-                <p>En investissant ce capital plutôt qu'en l'immobilisant dans l'achat d'un hardwallet, vous évitez un manque à gagner potentiellement important sur de longues périodes. 
+                <p>En investissant ce capital plutôt qu&apos;en l&apos;immobilisant dans l&apos;achat d&apos;un hardwallet, vous évitez un manque à gagner potentiellement important sur de longues périodes. 
                   Sur le graphique si dessous, vous pouvez comparer le côut de revient de votre hardwallet en fonction du modèle de financement.</p>
               </div>
               <div className={"image"}><img src="animation/payment.gif" alt="offline gif" /></div>
@@ -186,7 +211,7 @@ export default function Home() {
               <div className={"texte"}>
                 <h2>Conçu pour être utilisable par tous</h2>
                 <p>Notre objectif est que tout le monde puisse protéger efficacement ses clés privées. 
-                  Notre solution a donc été développée pour être simple d'utilisation et intuitive, afin qu'elle soit accessible à tous, des experts aux novices sans connaissances techniques.</p>
+                  Notre solution a donc été développée pour être simple d&apos;utilisation et intuitive, afin qu&apos;elle soit accessible à tous, des experts aux novices sans connaissances techniques.</p>
               </div>
               <div className={"image"}><img src="animation/family.gif" alt="offline gif" /></div>
             </div>
@@ -203,7 +228,7 @@ export default function Home() {
             <div className="advantage">
               <div className={"texte"}>
                 <h2>Accessible sur tous les supports</h2>
-                <p>Que vous utilisiez un ordinateur, un smartphone ou une tablette, notre solution fonctionne sur tous les supports. Vous n'avez besoin que d'un support de stockage physique pour stocker vos clés privées en toute sécurité.</p>
+                <p>Que vous utilisiez un ordinateur, un smartphone ou une tablette, notre solution fonctionne sur tous les supports. Vous n&apos;avez besoin que d&apos;un support de stockage physique pour stocker vos clés privées en toute sécurité.</p>
               </div>
               <div className={"image"}><img src="animation/devices.gif" alt="offline gif" /></div>
             </div>
@@ -218,11 +243,13 @@ export default function Home() {
         <MobileRipple />
         <div id="whitelist_text">
           <h1>Whitelist</h1>
-          <p>Inscrivez-vous à notre whitelist pour devenir l'un de nos premiers bêta-testeurs et être tenu informé de l'avancement du projet !</p>
-          <form>
-            <input type="email" placeholder="email"></input>
+          <p>Inscrivez-vous à notre whitelist pour devenir l&apos;un de nos premiers bêta-testeurs et être tenu informé de l&apos;avancement du projet !</p>
+          <form onSubmit={(e) => addEmailToDatabase(e)}>
+            <input type="email" id="email" placeholder="email"></input>
             <button type="submit">Submit</button>  {/* Ajouter e.preventdefault() */}
           </form>
+          {whitelistMessage == "Email ajouté avec succès" ? <p className="success">{whitelistMessage}</p> : 
+          whitelistMessage == "Problème lors de l'ajout de l'email" ? <p className="error">{whitelistMessage}</p> : <></>}
 
           {/* <p>Vous pouvez également suivre nos réseaux sociaux</p> 
            + icones réseaux sociaux
@@ -234,14 +261,14 @@ export default function Home() {
       <div id="faq">
         <h1>FAQ</h1>
         <div>
-          <h2 onClick={() => setDisplayResponse(1)}>Qu'est-ce qu'un wallet crypto ?</h2>
+          <h2 onClick={() => setDisplayResponse(1)}>Qu&apos;est-ce qu&apos;un wallet crypto ?</h2>
           {displayResponse == 1 ? <div>
             <p>Pour posséder un NFT, du Bitcoin, de l’Ethereum ou d’autres crypto-actifs, il vous faut un wallet. Lors de la création de ce wallet, deux clés sont générées :</p>
             <ul>
               <li><b>Une clé publique (adresse)</b> : Comparable à un numéro de compte bancaire, cette clé peut être partagée avec des tiers pour recevoir des cryptomonnaies sans compromettre les actifs de votre wallet.</li>
               <li><b>Une clé privée</b> : Cette clé vous permet de valider vos opérations et d’envoyer ou de recevoir des cryptomonnaies. Vous devez protéger votre clé privée et être la seule personne à la connaître. Toute personne ayant accès à votre clé privée peut accéder à vos cryptomonnaies.</li>
             </ul>
-            <p>Le but du wallet crypto est de stocker ces clés et de vous permettre d'interagir facilement avec la blockchain. Il vous aide à signer vos transactions, suivre le solde de votre portefeuille, gérer vos cryptomonnaies et utiliser des applications décentralisées (dApps).</p>
+            <p>Le but du wallet crypto est de stocker ces clés et de vous permettre d&apos;interagir facilement avec la blockchain. Il vous aide à signer vos transactions, suivre le solde de votre portefeuille, gérer vos cryptomonnaies et utiliser des applications décentralisées (dApps).</p>
             </div> : <></>}
           <hr/>
           <h2 onClick={() => setDisplayResponse(2)}>Pourquoi utiliser un hardwallet ?</h2>
@@ -267,9 +294,9 @@ export default function Home() {
             </p>
           </div> : <></>}
           <hr/>
-          <h2 onClick={() => setDisplayResponse(4)}>Que se passe-t-il si j'arrête de payer ou si je manque un paiement ?</h2>
+          <h2 onClick={() => setDisplayResponse(4)}>Que se passe-t-il si j&apos;arrête de payer ou si je manque un paiement ?</h2>
           {displayResponse == 4 ? <div>
-            <p>Pas d’inquiétude. Si vous manquez un paiement ou que vous décidez d’arrêter l'abonnement, vous ne perdrez pas vos fonds, et vous pourrez y accéder avec votre wallet dès la reprise de l’abonnement.
+            <p>Pas d’inquiétude. Si vous manquez un paiement ou que vous décidez d’arrêter l&apos;abonnement, vous ne perdrez pas vos fonds, et vous pourrez y accéder avec votre wallet dès la reprise de l’abonnement.
               <br/><br/>Vous pouvez également récupérer vos fonds sur un autre wallet en utilisant votre phrase de récupération (seed phrase). 
               <br/><br/>Cette opération est entièrement gratuite et sans frais supplémentaires.
             </p>

@@ -26,4 +26,6 @@ const MobileRipple = React.memo(() => {
   );
 });
 
+MobileRipple.displayName = 'MobileRipple';
+
 export default MobileRipple;

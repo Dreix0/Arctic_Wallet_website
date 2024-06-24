@@ -382,8 +382,12 @@ nav button{
 #whitelist input{
   padding: 5px;
   border-radius: 15px 0 0 15px;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
+
+#whitelist .success{color: green; font-weight: bold;}
+#whitelist .error{color: red; font-weight: bold;}
 
 #mobile_ripple{
   display: none;
