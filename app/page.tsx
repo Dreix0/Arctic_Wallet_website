@@ -14,6 +14,7 @@ import Ripple from "./components/ripple";
 import Chart from "./components/chart";
 import MobileRipple from "./components/mobile_ripple";
 import { FlipWords } from "./components/flip_words";
+import { MobileFlipWords } from "./components/mobile_flip_words";
 
 import Data from "./data/data.json"
 
@@ -97,9 +98,11 @@ export default function Home() {
 
       <div id="presentation">
         <div>
-          <h1>Stockez vos cryptomonnaies en toute sécurité sur votre propre <FlipWords words={["clé USB", "carte SD", "puce NFC", "stockage externe"]} className="flip_words"/></h1>
+          <h1>Stockez vos cryptomonnaies en toute sécurité sur votre propre <FlipWords words={["clé USB", "carte SD", "puce NFC", "stockage externe"]} className="flip_words"/>
+            <MobileFlipWords words={["clé USB", "carte SD", "puce NFC"]} className="mobile_flip_words"/>.
+          </h1>
           <p>Pour seulement 2€ par mois, notre service de hardwallet par abonnement vous permet de protéger vos cryptomonnaies en utilisant une clé USB, une carte SD ou tout autre support de stockage externe que vous possédez déjà. 
-            Gardez le contrôle total de vos actifs numériques grâce à notre solution de self-custody sécurisée, et simplifiez la sécurité de vos cryptomonnaies avec notre service accessible à tous.</p>
+            Gardez le contrôle total de vos actifs numériques grâce à notre solution de self-custody sécurisée, et simplifiez la sécurisation de vos cryptomonnaies avec notre service accessible à tous.</p>
             <Link href={"#advantages_bloc"}><button>En savoir plus</button></Link>
         </div>
         <img src="presentation/clé_usb_2.jpg" alt="image avec clé USB" id="usb_key"/>
@@ -187,7 +190,7 @@ export default function Home() {
                   Vous pouvez commencer à protéger vos actifs numériques sans investir dans des équipements et ainsi placer votre capital dans de réels actifs.</p>
                 <br/>
                 <p>En investissant ce capital plutôt qu&apos;en l&apos;immobilisant dans l&apos;achat d&apos;un hardwallet, vous évitez un manque à gagner potentiellement important sur de longues périodes. 
-                  Sur le graphique si dessous, vous pouvez comparer le côut de revient de votre hardwallet en fonction du modèle de financement.</p>
+                  Sur le graphique ci dessous, vous pouvez comparer le coût de revient de votre hardwallet en fonction du modèle de financement.</p>
               </div>
               <div className={"image"}><img src="animation/payment.gif" alt="offline gif" /></div>
             </div>
@@ -220,7 +223,7 @@ export default function Home() {
               <div className={"image"}><img src="animation/world.gif" alt="offline gif" /></div>
               <div className={"texte"}>
                 <h2>Accessible partout dans le monde</h2>
-                <p>PPeu importe où vous vous trouvez, notre solution de hardwallet est disponible pour vous. 
+                <p>Peu importe où vous vous trouvez, notre solution de hardwallet est disponible pour vous. 
                   Puisque nous ne vendons pas de dispositif physique, nous ne sommes pas limités par des contraintes de livraison, et vous pouvez accéder à notre wallet où que vous soyez dans le monde.</p>
               </div>
             </div>
