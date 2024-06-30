@@ -4,7 +4,6 @@
 
 /* 
 Remplacer dégradé de fond par une image dans la partie header
-Remplacer fond rond par un cercle avec dégradé dans la partie présentation
 Réduire les images pour le temps de chargement
 Voir pour rajouter des images de banquise pour éviter qu'elles soient trop grosse
 */
@@ -76,7 +75,6 @@ nav{
 }
 
 nav img{
-  height: 100%;
   border-radius: 50px 0px 0px 50px;
   background-color: rgb(var(--foreground-rgb));
   padding-left: 1vw;
@@ -87,21 +85,22 @@ nav button{
   margin-right: 50px;
 }
 
-/* Header */
-#header{
+/* Hero */
+#hero{
   height: 100vh;
   overflow: hidden;
   padding-top: 10vh;
-  background: url("../public/DA/fond_dégradé.jpg");  /* Mettre un radiant plutôt qu'une image */
+  background: url("../../public/DA/fond_dégradé.jpg");  /* Mettre un radiant plutôt qu'une image */
   background-size: cover;
 }
 
 #meteors{
   position: relative;
+  margin-top: -50px;
 }
 
-#header h1{
-  margin: 5vw;
+#hero h1{
+  margin: 20vh 5vw;
 }
 
 #banquise_img_1, #banquise_img_2, #banquise_img_3{
@@ -513,13 +512,11 @@ footer hr{
 }
 
 #algues{
-  width: 250px;
   right: 0px;
   z-index: -1;
 }
 
 #bulles{
-  width: 150px;
   right: 50px;
   z-index: -1;
 }
