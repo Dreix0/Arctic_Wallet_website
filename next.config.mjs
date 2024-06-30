@@ -3,10 +3,6 @@ import pkg from "next-intl/plugin"
 
 const  withNextIntl = pkg();
 
-const nextConfig = {
-    images: {
-      domains: ['arctic-wallet-website.vercel.app'],
-    }
-};
+const nextConfig = {};
 
 export default withNextIntl(nextConfig);

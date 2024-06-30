@@ -26,8 +26,8 @@ const Footer = (() => {
             <p>{t("contact_message")}</p>
           </div>
         </div>
-        <Image src="/DA/bulles.gif" alt="gif de bulles" id="bulles" width={150} height={250}/>
-        <Image src="/DA/algue.png" alt="image d'algue" id="algues" width={250} height={250}/>
+        <Image src="/backdrop/bulles.gif" alt="gif de bulles" id="bulles" width={150} height={250}/>
+        <Image src="/backdrop/algue.png" alt="image d'algue" id="algues" width={250} height={250}/>
         <p id="credit">Copyright © 2024. {t("copyright")}</p>
       </footer>
   );
