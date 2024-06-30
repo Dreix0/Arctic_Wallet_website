@@ -1,5 +1,5 @@
-import Ripple from "../components/ripple";
-import MobileRipple from "../components/mobile_ripple";
+import Ripple from "./ripple";
+import MobileRipple from "./mobile_ripple";
 
 import { useState } from "react";
 import { FormEvent } from "react";

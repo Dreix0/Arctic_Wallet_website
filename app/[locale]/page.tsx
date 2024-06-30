@@ -2,7 +2,7 @@
 
 import Hero from "./components/hero";
 import Presentation from "./components/presentation";
-import Whitelist from "./components/Whitelist";
+import Whitelist from "./components/whitelist"
 import FAQ from "./components/faq";
 import Footer from "./components/footer";
 import Advantages from "./components/advantages";
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main>
-      <Nav />  {/* Faire le choix des langues */}
+      <Nav />
       <Hero />
       <Presentation />
       <Advantages />

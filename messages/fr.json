@@ -79,7 +79,7 @@
 
       "question_3": "Que se passe-t-il si je perds mon hardwallet ?",
       "answer_3__p1": "Si vous perdez votre hardwallet, vous pouvez toujours récupérer vos fonds en utilisant un nouveau dispositif de stockage externe et votre phrase de récupération (seed phrase). Cette phrase, composée généralement de 12 à 24 mots, vous a été communiquée lors de la création de votre wallet et peut également être retrouvée dans votre application.",
-      "answer_3__p2": "Attention, votre phrase de récupération permet à quiconque y a accès d’accéder à vos fonds. Elle doit donc être stockée de manière très sécurisée et ne doit être partagée qu’avec des personnes de confiance.",
+      "answer_3__p2": "Attention, votre phrase de récupération permet à quiconque y ayant accès d’accéder à vos fonds. Elle doit donc être stockée de manière très sécurisée et ne doit être partagée qu’avec des personnes de confiance.",
       "answer_3__p3": "Cette opération est entièrement gratuite et sans frais supplémentaires.",
 
       "question_4": "Que se passe-t-il si j'arrête de payer ou si je manque un paiement ?",
