@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider, useLocale } from "next-intl";
+import { NextIntlClientProvider} from "next-intl";
 import "./globals.css";
 
 interface RootLayoutProps { children: React.ReactNode; params: {locale: string}};
