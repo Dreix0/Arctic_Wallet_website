@@ -90,7 +90,7 @@ nav button{
   height: 100vh;
   overflow: hidden;
   padding-top: 10vh;
-  background: url("../../public/DA/fond_dégradé.jpg");  /* Mettre un radiant plutôt qu'une image */
+  background: linear-gradient(to top, rgba(90, 197, 234, 0.5) 0%, rgb(19, 49, 93) 60%);
   background-size: cover;
 }
 
