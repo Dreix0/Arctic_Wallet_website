@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FlipWords } from "../components/flip_words";
 import { MobileFlipWords } from "../components/mobile_flip_words";
 
@@ -19,7 +18,7 @@ const Presentation = (() => {
         <p>{t("paragraph")}</p>
           <a href={"#advantages_bloc"}><button>{t("button")}</button></a>
       </div>
-      <Image src="/presentation/clé_usb_2.jpg" alt="image avec clé USB" width={400} height={400} id="usb_key"/>
+      <img src="presentation/clé_usb_2.jpg" alt="image avec clé USB" id="usb_key"/>
     </div>
   );
 });
