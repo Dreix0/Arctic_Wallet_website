@@ -15,14 +15,16 @@ const Hero = (() => {
             <h1>{t("title_1")}<br/>{t("title_2")}</h1>
         </div>
         
-        <Image src="/backdrop/banquise_2.png" alt="image banquise" id="banquise_img_2" width={1000} height={0}/>
+        {/* <Image src="/backdrop/banquise_2.png" alt="image banquise" id="banquise_img_2" width={1000} height={0}/>
         <Image src="/backdrop/banquise_1.png" alt="image banquise" id="banquise_img_1" width={1000} height={0}/>
-        <Image src="/backdrop/banquise_3.png" alt="image banquise" id="banquise_img_3"  width={1000} height={0}/>
+        <Image src="/backdrop/banquise_3.png" alt="image banquise" id="banquise_img_3"  width={1000} height={0}/> */}
+        <Image src="/backdrop/banquise_test2.png" alt="image banquise" id="banquise"  width={4000} height={0}/>
 
-        <Image src="/backdrop/bas_banquise.png" alt="image banquise" id="bas_banquise"  width={1000} height={0}/>
+        {/* <Image src="/backdrop/bas_banquise.png" alt="image banquise" id="bas_banquise"  width={1000} height={0}/> */}
+        <Image src="/backdrop/bas_banquise_test.png" alt="image banquise" id="bas_banquise"  width={1000} height={0}/>
 
-        <Image src="/backdrop/test.jpg" alt="iceberg" id="iceberg"  width={1000} height={0}/>
-        <Image src="/backdrop/iceberg_2.jpg" alt="iceberg" id="iceberg_2"  width={1000} height={0}/>
+        {/* <Image src="/backdrop/test.jpg" alt="iceberg" id="iceberg"  width={1000} height={0}/>
+        <Image src="/backdrop/iceberg_2.jpg" alt="iceberg" id="iceberg_2"  width={1000} height={0}/> */}
     </>
   );
 });

@@ -9,7 +9,7 @@ const Footer = (() => {
         <hr/>
         <div id="footer_content">
           <div>
-            <Image src="/logo/logo_fond_bleu.png" alt="Logo Arctic Wallet" width={150} height={60}/>
+            <Image src="/logo/logo_fond_semi_transparent.png" alt="Logo Arctic Wallet" width={150} height={60}/>
           </div>
           <div>
             <h2>{t("links_title")}</h2>
@@ -26,9 +26,11 @@ const Footer = (() => {
             <p>{t("contact_message")}</p>
           </div>
         </div>
-        <Image src="/backdrop/bulles.gif" alt="gif de bulles" id="bulles" width={150} height={250}/>
-        <Image src="/backdrop/algue.png" alt="image d'algue" id="algues" width={250} height={250}/>
-        <p id="credit">Copyright © 2024. {t("copyright")}</p>
+        {/* <Image src="/backdrop/bulles.gif" alt="gif de bulles" id="bulles" width={150} height={250}/>
+        <Image src="/backdrop/algue.png" alt="image d'algue" id="algues" width={250} height={250}/> */}
+        <Image src="/backdrop/fond_marin.png" alt="image de fond marin" id="fond_marin" width={500} height={500}/>
+        <Image src="/backdrop/epave.png" alt="image d'épave de bateau" id="epave" width={500} height={500}/>
+        <p id="credit">Copyright © 2025. {t("copyright")}</p>
       </footer>
   );
 });

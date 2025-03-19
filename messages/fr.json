@@ -1,13 +1,13 @@
 {
     "Hero": {
-      "title_1": "Sécurisez vos cryptomonnaies de manière simple,",
-      "title_2": "dès 2$ par mois"
+      "title_1": "Sécurisez vos cryptomonnaies facilement grâce au premier",
+      "title_2": "hardware wallet gratuit du marché"
     },
     "Presentation": {
       "title": "Stockez vos cryptomonnaies en toute sécurité sur votre propre ",
       "flip_words": "[`clé USB`, `carte SD`, `puce NFC`, `stockage externe`]",
       "mobile_flip_words": "[`clé USB`, `carte SD`, `puce NFC`]",
-      "paragraph": "Pour seulement 2$ par mois, notre service de hardwallet par abonnement vous permet de protéger vos cryptomonnaies en utilisant une clé USB, une carte SD ou tout autre support de stockage externe que vous possédez déjà. Gardez le contrôle total de vos actifs numériques grâce à notre solution de self-custody sécurisée, et simplifiez la sécurisation de vos cryptomonnaies avec notre service accessible à tous.",
+      "paragraph": "Notre solution de hardware wallet vous permet de protéger gratuitement vos cryptomonnaies en utilisant une clé USB, une carte SD ou tout autre support de stockage externe que vous possédez déjà. Gardez le contrôle total de vos actifs numériques grâce à notre solution de self-custody sécurisée, et simplifiez la sécurisation de vos cryptomonnaies avec notre service accessible à tous.",
       "button": "En savoir plus"
     },
     "Advantages": {
@@ -15,7 +15,7 @@
       "bloc_title1": "Sécurité",
       "bloc_p1": "Stockez vos cryptomonnaies et autres actifs numériques en toute sécurité",
       "bloc_title2": "Coût",
-      "bloc_p2": "La solution hardwallet la moins coûteuse du marché",
+      "bloc_p2": "Une solution gratuite pour des économies hors norme",
       "bloc_title3": "Accessibilité",
       "bloc_p3": "Achetez, vendez et transférez facilement vos actifs partout dans le monde",
 
@@ -28,22 +28,20 @@
       "advantage1_p3": "Afin de sécuriser vos données sensibles, nous utilisons plusieurs mécanismes et algorithmes de chiffrement de pointe, également employés par les armées et gouvernements. Ainsi, même en cas de perte ou de vol de votre support physique, vos informations restent inaccessibles et sécurisées.",
 
       "advantage2": "Pourquoi est-ce moins cher ?",
-      "advantage2_title1": "Le prix d’un café",
-      "advantage2_p1": "À seulement 2$ par mois, notre solution rend la sécurité des cryptomonnaies accessible pour le prix d’un café, afin qu’elle soit abordable pour tous.",
-      "advantage2_title2": "Flexibilité",
-      "advantage2_p2": "Grâce à notre modèle d’abonnement, vous pouvez bénéficier de nos services sans engagement. Vous pouvez arrêter ou reprendre votre abonnement à tout moment et ne payer que lorsque vous avez réellement besoin de nos services.",
       "advantage2_title3": "Pas d’achat initial",
-      "advantage2_p3_1": "Contrairement aux autres solutions de hardwallets, notre service ne nécessite aucun achat initial coûteux. Vous pouvez commencer à protéger vos actifs numériques sans investir dans des équipements et ainsi placer votre capital dans de réels actifs.",
-      "advantage2_p3_2": "En investissant ce capital plutôt qu’en l’immobilisant dans l’achat d’un hardwallet, vous évitez un manque à gagner potentiellement important sur de longues périodes. Sur le graphique ci dessous, vous pouvez comparer le coût de revient de votre hardwallet en fonction du modèle de financement.",
-      "graph_legend": "Compare les prix avec les performances de ",
-      "years": "ans",
-      "savings": "Economies : ",
+      "advantage2_p3_1": "Contrairement aux autres solutions de hardware wallets, notre service ne nécessite aucun achat initial coûteux. Vous pouvez commencer à protéger vos actifs numériques sans investir dans des équipements et ainsi placer votre capital dans de réels actifs.",
+      "advantage2_p3_2": "En investissant ce capital plutôt qu’en l’immobilisant dans l’achat d’un hardware wallet, vous évitez un manque à gagner potentiellement important sur de longues périodes. Sur le graphique ci dessous, vous pouvez comparer le coût de revient de votre hardware wallet en fonction du cours des cryptomonnaies.",
+      "parameters": "Paramètres",
+      "chosenCrypto": "Performance crypto",
+      "purchaseDate": "Date d'achat",
+      "purchasePrice": "Prix d'achat ($)",
+      "calcul": "Calculer",
 
       "advantage3": "Comment est-ce accessible ?",
       "advantage3_title1": "Conçu pour être utilisable par tous",
       "advantage3_p1": "Notre objectif est que tout le monde puisse protéger efficacement ses clés privées. Notre solution a donc été développée pour être simple d’utilisation et intuitive, afin qu’elle soit accessible à tous, des experts aux novices sans connaissances techniques.",
       "advantage3_title2": "Accessible partout dans le monde",
-      "advantage3_p2": "Peu importe où vous vous trouvez, notre solution de hardwallet est disponible pour vous. Puisque nous ne vendons pas de dispositif physique, nous ne sommes pas limités par des contraintes de livraison, et vous pouvez accéder à notre wallet où que vous soyez dans le monde.",
+      "advantage3_p2": "Peu importe où vous vous trouvez, notre solution de hardware wallet est disponible pour vous. Puisque nous ne vendons pas de dispositif physique, nous ne sommes pas limités par des contraintes de livraison, et vous pouvez accéder à notre wallet où que vous soyez dans le monde.",
       "advantage3_title3": "Accessible sur tous les supports",
       "advantage3_p3": "Que vous utilisiez un ordinateur, un smartphone ou une tablette, notre solution fonctionne sur tous les supports. Vous n’avez besoin que d’un support de stockage physique pour stocker vos clés privées en toute sécurité."
     },
@@ -64,23 +62,22 @@
       "answer_1__li2": " : Cette clé vous permet de valider vos opérations et d’envoyer ou de recevoir des cryptomonnaies. Vous devez protéger votre clé privée et être la seule personne à la connaître. Toute personne ayant accès à votre clé privée peut accéder à vos cryptomonnaies.",
       "answer_1__p2": "Le but du wallet crypto est de stocker ces clés et de vous permettre d’interagir facilement avec la blockchain. Il vous aide à signer vos transactions, suivre le solde de votre portefeuille, gérer vos cryptomonnaies et utiliser des applications décentralisées (dApps).",
 
-      "question_2": "Pourquoi utiliser un hardwallet ?",
+      "question_2": "Pourquoi utiliser un hardware wallet ?",
       "answer_2__p1": "Il existe différents types de portefeuilles crypto :",
       "answer_2__li1_b": "Hot wallets",
       "answer_2__li1": " : Stockent vos clés privées sur des appareils connectés à Internet, rendant vos actifs plus vulnérables aux attaques et piratages en ligne.",
       "answer_2__li2_b": "Cold wallets",
-      "answer_2__li2": " : Stockent vos clés privées hors ligne, à l’abri des menaces d’Internet. Parmi eux, on trouve les wallets à support papier et les hardwallets (portefeuilles matériels).",
+      "answer_2__li2": " : Stockent vos clés privées hors ligne, à l’abri des menaces d’Internet. Parmi eux, on trouve les wallets à support papier et les hardware wallets (portefeuilles matériels).",
       "answer_2__p2": "Les wallets peuvent également être classés en :",
       "answer_2__li3_b": "Wallets dépositaires",
       "answer_2__li3": " : Un tiers détient vos clés privées et vos actifs.",
       "answer_2__li4_b": "Wallets non dépositaires (self custody)",
       "answer_2__li4": " : Vous possédez et contrôlez entièrement vos clés privées et cryptomonnaies.",
-      "answer_2__p3": "Les hardwallets stockent vos clés privées hors ligne, sur un appareil physique, offrant ainsi une sécurité accrue et un contrôle total sur vos cryptomonnaies.",
+      "answer_2__p3": "Les hardware wallets stockent vos clés privées hors ligne, sur un appareil physique, offrant ainsi une sécurité accrue et un contrôle total sur vos cryptomonnaies.",
 
-      "question_3": "Que se passe-t-il si je perds mon hardwallet ?",
-      "answer_3__p1": "Si vous perdez votre hardwallet, vous pouvez toujours récupérer vos fonds en utilisant un nouveau dispositif de stockage externe et votre phrase de récupération (seed phrase). Cette phrase, composée généralement de 12 à 24 mots, vous a été communiquée lors de la création de votre wallet et peut également être retrouvée dans votre application.",
+      "question_3": "Que se passe-t-il si je perds mon hardware wallet ?",
+      "answer_3__p1": "Si vous perdez votre hardware wallet, vous pouvez toujours récupérer vos fonds en utilisant un nouveau dispositif de stockage externe et votre phrase de récupération (seed phrase). Cette phrase, composée généralement de 12 à 24 mots, vous a été communiquée lors de la création de votre wallet et peut également être retrouvée dans votre application.",
       "answer_3__p2": "Attention, votre phrase de récupération permet à quiconque y ayant accès d’accéder à vos fonds. Elle doit donc être stockée de manière très sécurisée et ne doit être partagée qu’avec des personnes de confiance.",
-      "answer_3__p3": "Cette opération est entièrement gratuite et sans frais supplémentaires.",
 
       "question_4": "Que se passe-t-il si j'arrête de payer ou si je manque un paiement ?",
       "answer_4__p1": "Pas d’inquiétude. Si vous manquez un paiement ou que vous décidez d’arrêter l’abonnement, vous ne perdrez pas vos fonds, et vous pourrez y accéder avec votre wallet dès la reprise de l’abonnement.",

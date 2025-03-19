@@ -29,6 +29,9 @@ export default async function LocaleLayout({children, params}: RootLayoutProps) 
 
   return (
     <html lang={locale}>
+      <head>
+      <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Iceland&display=swap" rel="stylesheet" />
+      </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

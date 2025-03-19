@@ -18,6 +18,8 @@ Voir pour rajouter des images de banquise pour éviter qu'elles soient trop gros
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
+  font-family: "Iceland", 'Courier New', Courier, monospace;
+  font-size: larger;
 }
 
 *{
@@ -27,12 +29,12 @@ body {
 
 h1{
   font-size: 2.5vw;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Iceberg", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2{
   font-size: 1.5vw;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Iceberg", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 p{
@@ -103,29 +105,36 @@ nav button{
   margin: 20vh 5vw;
 }
 
-#banquise_img_1, #banquise_img_2, #banquise_img_3{
+/* #banquise_img_1, #banquise_img_2, #banquise_img_3{
   position: absolute;
   bottom: 0;
   width: 40vw;
   min-width: 500px;
-  max-width: none;  /*  ???  */
+  max-width: none;}   ???  */
+
+#banquise{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 50vh;
 }
 
-#banquise_img_1{right: 0}
+/* #banquise_img_1{right: 0}
 #banquise_img_2{right: 30vw}
-#banquise_img_3{left: 0}
+#banquise_img_3{left: 0} */
 
-@media only screen and (max-width: 600px){
+/* @media only screen and (max-width: 600px){
   #banquise_img_2, #banquise_img_3{display: none}
 
-  #banquise_img_1{
+  #banquise_img_1{ */
     /* Voir affichage */
-  }
-}
-
+  /* }
+} */
+/* 
 @media only screen and (max-width: 1000px){
   #banquise_img_2{display: none}
-}
+} */
 
 .stars{
   position: absolute;
@@ -152,6 +161,7 @@ nav button{
 
 #bas_banquise{
   width: 100vw;
+  top: 105vh;
   position: absolute;
 }
 
@@ -304,8 +314,40 @@ nav button{
   margin-bottom: 3vh;
 }
 
-#graph_param p{
+#graph_bloc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 75px;
+  flex-wrap: wrap-reverse;
+}
+
+#graph_param{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 2.5vw;
+  border-right: 1px solid;
+  width: 10vw;
+  min-width: 250px;
+  height: 350px;
+}
+
+#graph_param input, #graph_param select{
+  border: 1px solid;
+  border-radius: 5px;
   text-align: center;
+  width: 100%;
+  margin: -10px auto 10px auto;
+}
+
+#graph_param button{
+  background-color: rgb(var(--secondary-rgb));
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px auto;
 }
 
 #graph{
@@ -313,6 +355,7 @@ nav button{
   height: 35vh;
   min-width: 300px;
   margin: auto;
+  padding-left: 1vw;
 }
 
 #tooltip{
@@ -326,13 +369,13 @@ nav button{
   font-size: larger;
 }
 
-#ledger_tooltip{
+/* #ledger_tooltip{
   color: rgba(108,222,248,1);
 }
 
 #arctic_tooltip{
   color: rgba(19,49,93,1);
-}
+} */
 
 @media (max-width: 768px) {
   .advantage:nth-child(2), .advantage:nth-child(6){
@@ -352,6 +395,32 @@ nav button{
 
   #advantages_title .selected h3{
     display: none;
+  }
+
+  .advantage .texte{
+    min-width: 275px;
+  }
+
+  #graph_bloc{
+    width: 80vw;
+  }
+
+  #graph, #graph_param{
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #graph_param{
+    border: none;
+    border-top: 1px solid;
+    margin-top: 90px;
+    padding-top: 15px;
+  }
+
+  #graph_bloc{
+    margin-bottom: 0;
   }
 }
 
@@ -472,6 +541,7 @@ footer{
   min-height: 25vh;
   position: relative;
   text-align: center;
+  text-shadow: 1px 1px 2.5px black, -1px -1px 2.5px black;
 }
 
 footer hr{
@@ -506,18 +576,19 @@ footer hr{
   text-align: left;
 }
 
-#algues, #bulles{
+#fond_marin{
   position: absolute;
-  bottom: -10px;
-}
-
-#algues{
+  width: 40vw;
+  bottom: -3px;
   right: 0px;
   z-index: -1;
 }
 
-#bulles{
-  right: 50px;
+#epave{
+  position: absolute;
+  width: 30vw;
+  bottom: -3px;
+  left: 0;
   z-index: -1;
 }
 
@@ -532,7 +603,12 @@ footer hr{
 
 @media (max-width: 768px) {
   #footer_content{
-    margin: 25px auto;
+    margin: 25px 25px 0px 25px;
+  }
+
+  #credit{
+    margin: 25px;
+    padding-top: 25px;
   }
 
   #footer_content div p, #footer_content div a{
