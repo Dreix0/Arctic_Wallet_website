@@ -5,7 +5,6 @@
 /* 
 Remplacer dégradé de fond par une image dans la partie header
 Réduire les images pour le temps de chargement
-Voir pour rajouter des images de banquise pour éviter qu'elles soient trop grosse
 */
 
 /* Général */
@@ -33,7 +32,7 @@ h1{
 }
 
 h2{
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   font-family: "Iceberg", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -50,8 +49,8 @@ p{
     font-size: 2.5vh;
   }
 
-  p{
-    font-size: 1.5vh;
+  p, ul{
+    font-size: 1.75vh;
   }
 }
 
@@ -89,7 +88,7 @@ nav button{
 
 /* Hero */
 #hero{
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   padding-top: 10vh;
   background: linear-gradient(to top, rgba(90, 197, 234, 0.5) 0%, rgb(19, 49, 93) 60%);
@@ -105,13 +104,6 @@ nav button{
   margin: 20vh 5vw;
 }
 
-/* #banquise_img_1, #banquise_img_2, #banquise_img_3{
-  position: absolute;
-  bottom: 0;
-  width: 40vw;
-  min-width: 500px;
-  max-width: none;}   ???  */
-
 #banquise{
   position: absolute;
   bottom: 0;
@@ -119,22 +111,6 @@ nav button{
   max-width: 100%;
   max-height: 50vh;
 }
-
-/* #banquise_img_1{right: 0}
-#banquise_img_2{right: 30vw}
-#banquise_img_3{left: 0} */
-
-/* @media only screen and (max-width: 600px){
-  #banquise_img_2, #banquise_img_3{display: none}
-
-  #banquise_img_1{ */
-    /* Voir affichage */
-  /* }
-} */
-/* 
-@media only screen and (max-width: 1000px){
-  #banquise_img_2{display: none}
-} */
 
 .stars{
   position: absolute;
@@ -368,14 +344,6 @@ nav button{
 #tooltip h2{
   font-size: larger;
 }
-
-/* #ledger_tooltip{
-  color: rgba(108,222,248,1);
-}
-
-#arctic_tooltip{
-  color: rgba(19,49,93,1);
-} */
 
 @media (max-width: 768px) {
   .advantage:nth-child(2), .advantage:nth-child(6){

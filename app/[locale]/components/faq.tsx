@@ -52,11 +52,6 @@ const FAQ = (() => {
                 <p>{t("answer_3__p1")}<br/><br/>{t("answer_3__p2")}</p>
             </div> : <></>}
             <hr/>
-            {/* <h2 onClick={() => changeQuestion(4)}>{t("question_4")}</h2>
-            {displayResponse == 4 ? <div>
-                <p>{t("answer_4__p1")}<br/><br/>{t("answer_4__p2")}<br/><br/>{t("answer_4__p3")}</p>
-            </div> : <></>}
-            <hr/> */}
             <h2 onClick={() => changeQuestion(5)}>{t("question_5")}</h2>
             {displayResponse == 5 ? <div>
                 <p>{t("answer_5__p1")}<br/><br/>{t("answer_5__p2")}</p>
