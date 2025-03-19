@@ -89,7 +89,7 @@ nav button{
 /* Hero */
 #hero{
   height: 100svh;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   padding-top: 10vh;
   background: linear-gradient(to top, rgba(90, 197, 234, 0.5) 0%, rgb(19, 49, 93) 60%);
